@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: davemcorwin/test-netlify-cms
+collections:
+  - name: "page"
+    label: "Page"
+    folder: "pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "select", options: ["page"]}
+      - {label: "Sidenav", name: "sidenav", widget: "select", options: ["docs"]}
+      - label: "Subnav"
+        name: "subnav"
+        widget: "list"
+        fields:
+          - label: "Text"
+            name: "text"
+            widget: "string"
+          - label: "Href"
+            name: "href"
+            widget: "string"
+      - {label: "Body", name: "body", widget: "markdown"}
+
+publish_mode: editorial_workflow
+media_folder: "assets/img"
