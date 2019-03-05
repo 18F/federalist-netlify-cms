@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: davemcorwin/test-netlify-cms
+  repo: 18F/federalist-netlify-cms
 collections:
   - name: "page"
     label: "Page"
